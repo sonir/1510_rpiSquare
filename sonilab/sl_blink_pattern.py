@@ -5,12 +5,12 @@ class SlBlinkPattern:
 
     def __init__(self, interval):
         # self.metro = sl_metro.Metro( (interval*0.1) )
-        self.list1 = [1, 0, 0, 0, 0, 0, 0, 0, 0]
-        self.list1_interval = 0.2
-        self.list2 = [1, 0, 1, 0, 1, 0, 0]
-        self.list2_interval = 0.5
-        self.list3 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-        self.list3_interval = 2
+        self.list1 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.list1_interval = 0.01
+        self.list2 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        self.list2_interval = 0.01
+        self.list3 = [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+        self.list3_interval = 0.01
         self.count = -1
 
     def bang(self) :

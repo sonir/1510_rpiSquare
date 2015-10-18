@@ -8,7 +8,7 @@ class SqSquare:
         for var in range(9):
             blinker = sonilab.sl_blink_pattern.SlBlinkPattern(100)
             self.blinkers.append(blinker)
-        self.metro = sonilab.sl_metro.Metro(1)
+        self.metro = sonilab.sl_metro.Metro(0.01)
         self.gpio = sonilab.sl_gpio.SlGpio()
 
     def update(self):
@@ -16,7 +16,7 @@ class SqSquare:
             for var in range(len(self.blinkers)):
                 val = self.blinkers[var].update()
                 self.gpio.set(var,val)
-        self.gpio.update()
+            self.gpio.update()
 
     def callback(self, adr, ival, fval):
         if adr == "/square/relay":

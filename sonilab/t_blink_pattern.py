@@ -4,15 +4,17 @@ import sl_blink_pattern, sl_metro
 blinker = sl_blink_pattern.SlBlinkPattern(100)
 metro = sl_metro.Metro(1)
 
-metro.set(blinker.bang())
+metro.set(0.01)
+blinker.bang()
 count = 0
 while True:
     if metro.update():
-        print(blinker.update())
-        count = count+1
-        if count > 10:
-            metro.set(blinker.bang())
-            count = 0
+        print blinker.update()
+        # count = count+1
+        # if count > 10:
+        #     metro.set(blinker.bang())
+        #     count = 0
+        #     print " | "
 
 
 # for var in range(30):
