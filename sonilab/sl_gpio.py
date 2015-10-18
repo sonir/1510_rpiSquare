@@ -21,9 +21,9 @@ class SlGpio :
             self.CH_MAX = CH_MAX
             self.GPIO = GPIO
             self.GPIO.setmode(GPIO.BOARD)
-            global PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H
-            self.ch = [PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H]
-            self.ch_val = [False, False, False, False, False, False, False, False]
+            global PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H, PIN_I
+            self.ch = [PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H, PIN_I]
+            self.ch_val = [False, False, False, False, False, False, False, False, False]
 
             for var in range(CH_MAX):
                 print("The pin {0} was set as OUTPUT".format(self.ch[var]))
