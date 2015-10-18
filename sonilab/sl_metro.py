@@ -22,7 +22,6 @@ class Metro :
             self.reset()
             return True
         else:
-            pass
             return False
 
     def set(self, interval):

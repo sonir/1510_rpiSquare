@@ -14,36 +14,35 @@ CH_MAX = 9
 
 class SlGpio :
 
-    try:
-        #while True :
-        def __init__ (self) :
-            print("init")
-            self.CH_MAX = CH_MAX
-            self.GPIO = GPIO
-            self.GPIO.setmode(GPIO.BOARD)
-            global PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H, PIN_I
-            self.ch = [PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H, PIN_I]
-            self.ch_val = [False, False, False, False, False, False, False, False, False]
+    #while True :
+    def __init__ (self) :
+        print("init")
+        self.CH_MAX = CH_MAX
+        self.GPIO = GPIO
+        self.GPIO.setmode(GPIO.BOARD)
+        global PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H, PIN_I
+        self.ch = [PIN_A, PIN_B, PIN_C, PIN_D, PIN_E, PIN_F, PIN_G, PIN_H, PIN_I]
+        self.ch_val = [False, False, False, False, False, False, False, False, False]
 
-            for var in range(CH_MAX):
-                print("The pin {0} was set as OUTPUT".format(self.ch[var]))
-                self.GPIO.setup(self.ch[var],GPIO.OUT)
+        for var in range(CH_MAX):
+            print("The pin {0} was set as OUTPUT".format(self.ch[var]))
+            self.GPIO.setup(self.ch[var],GPIO.OUT)
 
 
-            # self.GPIO.setmode(GPIO.BOARD)
-                # self.GPIO.setup(self.pi,GPIO.OUT)
+        # self.GPIO.setmode(GPIO.BOARD)
+            # self.GPIO.setup(self.pi,GPIO.OUT)
 
-        def set (self, ch, val) :
-            if ch >= CH_MAX or ch < 0:
-                print("The CH is invalid")
-                return False
-            else:
-                self.ch_val[ch]=val
-                return True
+    def set (self, ch, val) :
+        if ch >= CH_MAX or ch < 0:
+            print("The CH is invalid")
+            return False
+        else:
+            self.ch_val[ch]=val
+            return True
 
-        def update(self) :
-            for var in range(CH_MAX):
-                GPIO.output(self.ch[var],self.ch_val[var])
+    def update(self) :
+        for var in range(CH_MAX):
+            GPIO.output(self.ch[var],self.ch_val[var])
 
-    except KeyboardInterrupt :
+    def destroy(self):
     	GPIO.cleanup()
