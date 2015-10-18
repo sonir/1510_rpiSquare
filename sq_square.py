@@ -20,5 +20,7 @@ class SqSquare:
 
     def callback(self, adr, ival, fval):
         if adr == "/square/relay":
+            print "/square/relay",
+            print ch
             ch = ival
             self.blinkers[ch].bang()
