@@ -8,7 +8,7 @@ class SqSquare:
         for var in range(9):
             blinker = sonilab.sl_blink_pattern.SlBlinkPattern(100)
             self.blinkers.append(blinker)
-        self.metro = sonilab.sl_metro.Metro(0.05)
+        self.metro = sonilab.sl_metro.Metro(0.01)
         self.gpio = sonilab.sl_gpio.SlGpio()
 
     def update(self):
