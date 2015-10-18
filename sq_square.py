@@ -1,4 +1,4 @@
-import sonilab.sl_blink_pattern, sonilab.sl_metro, sonilab.sl_gpio
+import sonilab.sl_blink_pattern, sonilab.sl_metro, sonilab.sl_gpio2
 
 class SqSquare:
 
@@ -9,7 +9,7 @@ class SqSquare:
             blinker = sonilab.sl_blink_pattern.SlBlinkPattern(100)
             self.blinkers.append(blinker)
         self.metro = sonilab.sl_metro.Metro(1)
-        self.gpio = sonilab.sl_gpio.SlGpio()
+        self.gpio = sonilab.sl_gpio2.SlGpio()
 
     def update(self):
         if self.metro.update():
