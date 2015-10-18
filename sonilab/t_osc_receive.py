@@ -1,7 +1,7 @@
-import sq_osc_receive, observer
+import sl_osc_receive, observer
 
 obs = observer.Observer()
-osc = sq_osc_receive.SqOscReceive(54321,obs)
+osc = sl_osc_receive.SlOscReceive(54321,obs)
 
 try:
     while True:
