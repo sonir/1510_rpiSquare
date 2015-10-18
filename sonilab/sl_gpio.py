@@ -9,7 +9,8 @@ PIN_E = 13
 PIN_F = 15
 PIN_G = 19
 PIN_H = 21
-CH_MAX = 8
+PIN_I = 23
+CH_MAX = 9
 
 class SlGpio :
 
